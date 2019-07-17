@@ -2,7 +2,9 @@
     apply():: {
         local updateCommandLines(name, app) = (
             app + {
-                command: "bin/snapcraft-preload $SNAP/" + app.command
+                "command-chain"+: [
+                    "bin/snapcraft-preload",
+                ],
             }
         ),
         apps:
