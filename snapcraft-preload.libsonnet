@@ -5,6 +5,7 @@
                 "command-chain"+: [
                     "bin/snapcraft-preload",
                 ],
+                adapter: "full",
             }
         ),
         apps: (
