@@ -7,10 +7,11 @@
                 ],
             }
         ),
-        apps:
-            if super.apps then
+        apps: (
+            if std.length(super.apps) > 0 then
                 std.mapWithKey(updateCommandLines, super.apps)
-            else {},
+            else {}
+        ),
         parts+: {
             "snapcraft-preload": {
                 source: "https://github.com/sergiusens/snapcraft-preload.git",
